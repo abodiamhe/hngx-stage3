@@ -2,29 +2,11 @@ import { useState, useEffect, useRef } from "react";
 
 import TextArea from "./component/TextArea";
 import Header from "./component/Header";
-import Translate from "./component/translate";
+import Translate from "./component/Translate";
 import detector from "./util/detector";
 import translate from "./util/translate";
 import summarize from "./util/summarize";
 
-const textData = [
-  {
-    id: "d11",
-    lang: "en",
-    text: "Where is the next bus stop, please?",
-    trans: "svsv erffs vusms",
-    sum: "The text asks where the next bus stop is, likely in a specific location. It doesn't provide any further context about why the bus stop is important or the person's need for it.",
-    count: 15,
-  },
-  {
-    id: "d12",
-    lang: "en",
-    text: "Hello",
-    trans: "svsv erffs vusms",
-    sum: "It doesn't offer any further information about the greeting or its meaning.",
-    count: 7,
-  },
-];
 
 function App() {
   const containerRef = useRef(null);
