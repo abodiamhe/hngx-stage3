@@ -11,6 +11,13 @@ html {
   font-size: 62.5%;
 }
 
+@media only screen and (max-width: 50em) {
+  html { 
+    font-size: 50%;
+  }
+}
+
+
 body {
   color: #4C585B;
   font-size: 2rem; 
@@ -24,7 +31,7 @@ body {
 }
 
 .container {
-  height: 100vh;
+   height: 100vh;
   /* width: 100%; */
   display: grid;
   grid-template-columns:
@@ -35,7 +42,19 @@ body {
     [center-end] minmax(6rem, 1fr) [full-end];
 }
 
+@media only screen and (max-width: 37.5em) {
+  .container { 
+    grid-template-columns:
+    [full-start] minmax(2rem, 1fr) [center-start] repeat(
+      8,
+      minmax(min-content, 14rem)
+    )
+    [center-end] minmax(2rem, 1fr) [full-end];
+  }
+}
+
 .feature {
+  /* height: 100%; */
   grid-column: center-start/ center-end;
   border: 2px solid #d1d8c5;
   border-radius: 6px;
@@ -46,8 +65,9 @@ body {
   
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
+  /* justify-content: space-between; */
+  height: 100vh;
+  /* width: 100%; */
 
   -webkit-box-shadow: 0px 12px 10px 4px rgba(209, 216, 197, 1);
   -moz-box-shadow: 0px 12px 10px 4px rgba(209, 216, 197, 1);
@@ -69,4 +89,6 @@ body {
   z-index: 2;
 }
 
- 
+section {
+  flex: 1;
+}

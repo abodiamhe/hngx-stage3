@@ -16,7 +16,7 @@ export default function TextArea({ onChange, onInput, onSubmit }) {
           onChange={onChange}
         ></textarea>
         <button type="submit">
-          <img src={sendIcon} alt="Send icon" className={classes.icon} />
+          <img src={sendIcon} alt="Send user input text icon" className={classes.icon} />
         </button>
       </form>
       {onInput.text.length > 0 && (

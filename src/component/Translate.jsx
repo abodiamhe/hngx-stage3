@@ -17,7 +17,7 @@ export default function Translate({
       <div className={classes.trans_container}>
         {text.map((text, index) => {
           return (
-            <div key={text.id} className={classes.translate}>
+            <div key={text.id} className={classes.translate} tabIndex="0">
               <div className={classes.text_box}>
                 <div className={classes.text_div}>
                   <p className={classes.text}>{text.text}</p>

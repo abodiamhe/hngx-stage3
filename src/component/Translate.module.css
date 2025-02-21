@@ -1,13 +1,19 @@
 .trans_container {
+  /* height: 80%; */
+
   display: grid;
   justify-items: end;
   gap: 6rem;
   padding: 3rem;
+  overflow: auto;
 }
 
 .conatinaer {
+    /* height: 80%; */
+  flex: 8;
   overflow: auto;
-  max-height: 50rem;
+  max-height: 60rem;
+  /* max-height: 80%; */
 }
 
 .translate {
@@ -23,6 +29,7 @@
 
 .text_div {
   display: grid;
+  /* width: 100%; */
   gap: 2rem;
   background-color: #6c8e92;
   border-radius: 6px;
@@ -31,6 +38,8 @@
   padding-right: 2rem;
   color: #f5fafa;
   margin-bottom: 2rem;
+  
+  position: relative;
 }
 
 .action_container {
@@ -55,7 +64,8 @@
 }
 
 .action select:focus {
-  outline: none;
+  /* outline: none; */
+  outline: 1px solid #8bb7bb;
 }
 
 .lang {
@@ -114,4 +124,33 @@
   cursor: not-allowed;
   pointer-events: none;
   background-color: #bec6ca;
+}
+
+@media only screen and (max-width: 50em) {
+  .trans_action {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+  .sum_action {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .action {
+    gap: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
+  .action select {
+    padding: 0.5rem;
+    padding-right: 0.2rem;
+  }
+}
+
+@media only screen and (max-width: 25em) {
+  .lang {
+    position: absolute;
+    top: -5%;
+    right: 5%;
+  }
 }
